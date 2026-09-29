@@ -1,0 +1,2 @@
+import bcrypt from 'bcryptjs'; import 'dotenv/config'; import connectDB from './config/db.js'; import User from './models/User.js';
+await connectDB(); const email=process.env.ADMIN_EMAIL||'admin@example.com'; const password=process.env.ADMIN_PASSWORD||'Admin123!'; const hash=await bcrypt.hash(password,12); await User.findOneAndUpdate({email},{name:'Administrator',email,password:hash,role:'ADMIN'},{upsert:true,new:true,setDefaultsOnInsert:true}); console.log(`Admin seeded: ${email}`); process.exit(0);
