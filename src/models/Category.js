@@ -1,1 +1,9 @@
-import mongoose from 'mongoose'; const schema=new mongoose.Schema({name:{type:String,required:true,trim:true},user:{type:mongoose.Schema.Types.ObjectId,ref:'User',default:null}},{timestamps:true}); export default mongoose.model('Category',schema);
+import mongoose from "mongoose";
+const schema = new mongoose.Schema(
+  {
+    name: { type: String, required: true, trim: true },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", default: null },
+  },
+  { timestamps: true },
+);
+export default mongoose.model("Category", schema);
