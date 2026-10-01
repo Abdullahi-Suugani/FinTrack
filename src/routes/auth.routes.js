@@ -1,1 +1,10 @@
-import { Router } from 'express'; import { register,login,profile } from '../controllers/auth.controller.js'; import { validate } from '../middleware/validate.middleware.js'; import { registerSchema,loginSchema } from '../schemas/auth.schema.js'; import { authenticate } from '../middleware/auth.middleware.js'; const r=Router();r.post('/register',validate(registerSchema),register);r.post('/login',validate(loginSchema),login);r.get('/profile',authenticate,profile);export default r;
+import { Router } from "express";
+import { register, login, profile } from "../controllers/auth.controller.js";
+import { validate } from "../middleware/validate.middleware.js";
+import { registerSchema, loginSchema } from "../schemas/auth.schema.js";
+import { authenticate } from "../middleware/auth.middleware.js";
+const r = Router();
+r.post("/register", validate(registerSchema), register);
+r.post("/login", validate(loginSchema), login);
+r.get("/profile", authenticate, profile);
+export default r;

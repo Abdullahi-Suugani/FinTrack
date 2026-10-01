@@ -1,1 +1,6 @@
-import { Router } from 'express'; import { authenticate } from '../middleware/auth.middleware.js'; import { listCategories } from '../controllers/category.controller.js'; const r=Router();r.get('/',authenticate,listCategories);export default r;
+import { Router } from "express";
+import { authenticate } from "../middleware/auth.middleware.js";
+import { listCategories } from "../controllers/category.controller.js";
+const r = Router();
+r.get("/", authenticate, listCategories);
+export default r;
