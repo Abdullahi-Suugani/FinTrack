@@ -1,4 +1,4 @@
-# Personal Finance Tracker
+ ## Personal Finance Tracker
 
 A full-stack Personal Finance Tracker that helps users manage their income and expenses, organize transactions by category, view monthly financial summaries, and manage their profile.
 
